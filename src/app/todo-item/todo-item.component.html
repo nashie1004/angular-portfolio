@@ -1,4 +1,4 @@
-<li class="" id="{{ todoItem.id }}">
-    <input type="checkbox" name="" id="" [checked]="todoItem.completed" (change)="deleteTodo()" >
+<div class="d-flex gap-2">
+    <input class="form-check-input" type="checkbox" name="" id="" [checked]="todoItem.completed" (change)="deleteTodo()" >
     <span>{{ todoItem.name }}</span>
-</li>
+</div>

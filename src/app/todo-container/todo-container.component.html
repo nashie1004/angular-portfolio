@@ -1,11 +1,14 @@
-<div>
-    <h1>My Todo Application</h1>
-    <div>
-        <input [(ngModel)]="currentTaskName" type="text" placeholder="New task here...">
-        <button (click)="addTodoItem()">Add Task</button>
+<div class="container">
+    <div class="alert alert-primary mt-4" role="alert">
+    A simple warning alert—check it out!
     </div>
-    <h3>Todo Items:</h3>
-    <ul *ngFor="let todoItem of todoItems">
-        <app-todo-item [removeTodoItem]="removeTodoItem" [todoItem]="todoItem"></app-todo-item>
-    </ul>    
+    <div class="input-group mb-2">
+        <input class="form-control" [(ngModel)]="currentTaskName" type="text" placeholder="New task here...">
+        <button class="btn btn-dark" (click)="addTodoItem()">Add Task</button>
+    </div>
+    <ul class="list-group">
+        <li *ngFor="let todoItem of todoItems" class="list-group-item">
+            <app-todo-item [removeTodoItem]="removeTodoItem" [todoItem]="todoItem"></app-todo-item>
+        </li>    
+    </ul>
 </div>
