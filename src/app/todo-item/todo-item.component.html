@@ -1,4 +1,4 @@
-<li class="" id="{{ todoItem?.id }}">
-    <input type="checkbox" name="" id="" checked="{{ todoItem?.completed }}" >
-    <span>{{ todoItem?.name }}</span>
+<li class="" id="{{ todoItem.id }}">
+    <input type="checkbox" name="" id="" [checked]="todoItem.completed" (change)="deleteTodo()" >
+    <span>{{ todoItem.name }}</span>
 </li>

@@ -8,6 +8,10 @@ import { ITodoItem } from '../types/types';
   styleUrl: './todo-item.component.css'
 })
 export class TodoItemComponent {
-  @Input() todoItem?: ITodoItem;
+  @Input() todoItem!: ITodoItem;
+  @Input() removeTodoItem!: (id: number) => void;
 
+  deleteTodo(){
+    this.removeTodoItem(this.todoItem.id);
+  }  
 }

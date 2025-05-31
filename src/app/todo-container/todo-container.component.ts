@@ -25,4 +25,9 @@ export class TodoContainerComponent {
 
     this.currentTaskName = "";
   }
+
+  removeTodoItem = (id: number) => {
+    this.todoItems = this.todoItems.filter(i => i.id !== id);
+  }
+
 }
