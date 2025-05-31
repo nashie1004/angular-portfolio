@@ -1,0 +1,11 @@
+<div>
+    <h1>My Todo Application</h1>
+    <div>
+        <input [(ngModel)]="currentTaskName" type="text" placeholder="New task here...">
+        <button (click)="addTodoItem()">Add Task</button>
+    </div>
+    <h3>Todo Items:</h3>
+    <ul *ngFor="let todoItem of todoItems">
+        <app-todo-item [todoItem]="todoItem"></app-todo-item>
+    </ul>    
+</div>
